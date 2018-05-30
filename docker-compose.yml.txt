@@ -1,0 +1,19 @@
+version: "2.2"
+services:
+  tizenstudio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        http_proxy:
+        https_proxy:
+        no_proxy:
+    image: dhsshine/tizen-studio:latest
+    command: ['/bin/bash']
+    tty: true
+    stdin_open: true
+    init: true
+    environment:
+      http_proxy:
+      https_proxy:
+no_proxy:
